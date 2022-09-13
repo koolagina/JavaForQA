@@ -7,21 +7,17 @@ import static lesson6_1.KindOfAnimal.*;
 public class HW6 {
 
     public static void main(String[] args) {
+//Создаем массив из экземпляров класса
+        final List<Animal> animals = new ArrayList<>();
+        animals.add(Animal.of(CAT));
+        animals.add(Animal.of(DOG));
+        animals.add(Animal.of(CAT));
 
-            final List<Animal> animals = new ArrayList<>();
-            animals.add(Animal.of(CAT));
-            animals.add(Animal.of(DOG));
-            animals.add(Animal.of(CAT));
-
-            animals.forEach(animal -> {
-                // методы run,swim,jump отрабатывают по разному для созданных экземпляров класса Dog,Cat,
-                // хотя фактически всегда обращаемся к переменной типа Animal (коллекция типизирована суперклассом Animal)
-                // это и есть одно из возможных проявлений полифорфизма
-                System.out.println(animal.run(100));
-                System.out.println(animal.swim(5));
-                });
-
-        }
-
+        // Методы run,swim отрабатывают по разному для созданных экземпляров классов Dog,Cat(коллекция типизирована суперклассом Animal)
+        animals.forEach(animal -> {
+            System.out.println(animal.run(100));
+            System.out.println(animal.swim(5));
+        });
     }
+}
 
