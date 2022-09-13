@@ -5,7 +5,6 @@ import java.util.List;
 import static lesson6_1.KindOfAnimal.*;
 
 public class HW6 {
-
     public static void main(String[] args) {
 //Создаем массив из экземпляров класса
         final List<Animal> animals = new ArrayList<>();
